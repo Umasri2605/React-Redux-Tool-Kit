@@ -11,7 +11,6 @@ function App() {
     <div className="border border-2 border-dark p-4 m-4">
       <h1>RTK Components</h1>
       <Navbar></Navbar>
-      
       <Outlet /> 
     </div>
   );
