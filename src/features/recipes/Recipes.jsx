@@ -15,7 +15,7 @@ function Recipes() {
         <ul className='d-flex flex-wrap list-unstyled justify-content-between'>
           {data?.recipes.map((recipe) => (
             <li className="m-2">
-              <h5>{recipe.name}</h5>
+              <h5>{recipe.name.slice(0,10)}</h5>
               <img src={recipe.image} width="200px" alt={recipe.name} />
             </li>
           ))}
