@@ -35,9 +35,7 @@ export const leadsApi = createApi({
   }), 
   }),
 });
-
-
-export const {
+ export const {
   useGetAllLeadsQuery,
   useAddNewLeadMutation,
   useDeleteLeadMutation, 
