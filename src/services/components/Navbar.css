@@ -1,0 +1,29 @@
+
+.brand-color {
+    color: #1b0414; 
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+  }
+  
+  .brand-color:hover {
+    color: #531c47;
+    text-decoration: none;
+  }
+  
+  .link-style {
+    color: #495057; 
+  }
+  
+  .link-style:hover {
+    color: #48245f; 
+  }
+  
+  .active-link {
+    color: #ffffff !important;
+    background-color: #6c5586;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  

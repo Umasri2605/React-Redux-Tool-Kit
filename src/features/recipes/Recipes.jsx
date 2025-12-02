@@ -1,29 +1,48 @@
-
 import React from "react";
-import { useGetAllrecipesQuery } from "../../services/recipesApi"; 
+import { useGetAllrecipesQuery } from "../../services/recipesApi";
 
 function Recipes() {
   const { isLoading, data } = useGetAllrecipesQuery();
 
   return (
-    <div className='border  border-1 p-3 m-3 border-primary'>
-      <h1>Recipes Component:</h1> 
+    <div className="container mt-4">
+      <h1 className="mb-4 text-center text-success">Recipes</h1>
 
-      {isLoading && <h5>Recipes Loading...</h5>}
+      {isLoading && <h5 className="text-center">Recipes Loading...</h5>}
 
       {!isLoading && (
-        <ul className='d-flex flex-wrap list-unstyled justify-content-between'>
-          {data?.recipes.map((recipe) => (
-            <li className="m-2">
-              <h5>{recipe.name.slice(0,10)}</h5>
-              <img src={recipe.image} width="200px" alt={recipe.name} />
-            </li>
+        <div className="row g-4">
+          {data?.recipes.map((recipe, index) => (
+            <div key={index} className="col-sm-6 col-md-4 col-lg-3">
+              <div 
+                className="card recipe-card h-100 shadow-sm text-center"
+                style={{ transition: "transform 0.3s, box-shadow 0.3s" }}
+              >
+                <img 
+                  src={recipe.image} 
+                  className="card-img-top" 
+                  alt={recipe.name} 
+                  style={{ height: "200px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{recipe.name.slice(0, 20)}</h5>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
+
+      <style>{`
+        .recipe-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+      `}</style>
     </div>
   );
 }
 
 export default Recipes;
+
 
