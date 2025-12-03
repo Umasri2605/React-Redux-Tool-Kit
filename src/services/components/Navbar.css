@@ -1,29 +1,36 @@
 
+.navbar {
+  background: linear-gradient(90deg, #dfe4ea, #ced6e0, #dcdde1);
+  padding: 10px 0;
+}
+
 .brand-color {
-    color: #1b0414; 
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    margin-left: 15px;
-  }
-  
-  .brand-color:hover {
-    color: #531c47;
-    text-decoration: none;
-  }
-  
-  .link-style {
-    color: #495057; 
-  }
-  
-  .link-style:hover {
-    color: #48245f; 
-  }
-  
-  .active-link {
-    color: #ffffff !important;
-    background-color: #6c5586;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-  
+  color: #2f1235 !important;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.link-style {
+  color: #333 !important;
+  font-size: 1.05rem;
+  padding: 8px 15px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.link-style:hover {
+  background: #f1f2f6;
+  color: #290423 !important;
+}
+
+.active-link {
+  background: #0b131f !important;
+  color: white !important;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler-icon {
+  filter: invert(0.6);
+}
