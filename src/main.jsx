@@ -13,11 +13,11 @@ import {
 import Counter from "./features/counter/Counter.jsx"
 import Recipes from "./features/recipes/Recipes.jsx"
 import Todolist from "./features/todolist/Todolist.jsx"
-import Products from './features/products/products.jsx';
 import Leads from './features/leads/Leads.jsx';
 import AddLeads from './features/leads/AddLeads.jsx';
 import EditLead from './features/leads/EditLead.jsx';
 import AddRemarks from './features/leads/AddRemarks.jsx';
+import Products from './features/products/Products.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,23 +26,23 @@ const router = createBrowserRouter([
        children: [
       {
         path: 'products',
-        element: <Products/>
+        element: <Products></Products>
       },
       {
         path: 'recipes',
-        element: <Recipes/>
+        element: <Recipes></Recipes>
       },
       {
         path: 'counter',
-        element: <Counter/>
+        element: <Counter></Counter>
       },
       {
         path: 'todolist',
-        element: <Todolist/>
+        element: <Todolist></Todolist>
       },
       {
         path: 'leads',
-        element: <Leads/>
+        element: <Leads></Leads>
       },
       {
         path:'addLead',
